@@ -38,7 +38,13 @@ case 'NON BADAN HUKUM (KELOMPOK)':
                     break;
 case 'Tidak ada lembaga':
                     return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.988}),fill: new ol.style.Fill({color: 'rgba(150,150,150,1.0)'}),
+        
+        fill: fill_SebaranLembagaEkonomiDominandiKawasanTransmigrasi_4,
+        text: createTextStyle(feature, resolution, labelText, labelFont,
+                              labelFill, placement, bufferColor,
+                              bufferWidth)
+    }),new ol.style.Style({
+        stroke: new ol.style.Stroke({color: 'rgba(218,32,32,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.748}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

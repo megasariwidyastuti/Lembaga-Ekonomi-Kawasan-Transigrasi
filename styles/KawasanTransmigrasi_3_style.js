@@ -1,25 +1,5 @@
 var size = 0;
 var placement = 'point';
-function categories_KawasanTransmigrasi_3(feature, value, size, resolution, labelText,
-                       labelFont, labelFill, bufferColor, bufferWidth,
-                       placement) {
-                var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
-                switch(valueStr) {case 'PK':
-                    return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.988}),fill: new ol.style.Fill({color: 'rgba(194,150,66,1.0)'}),
-        text: createTextStyle(feature, resolution, labelText, labelFont,
-                              labelFill, placement, bufferColor,
-                              bufferWidth)
-    })];
-                    break;
-case 'PN':
-                    return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.988}),fill: new ol.style.Fill({color: 'rgba(53,129,165,1.0)'}),
-        text: createTextStyle(feature, resolution, labelText, labelFont,
-                              labelFill, placement, bufferColor,
-                              bufferWidth)
-    })];
-                    break;}};
 
 var style_KawasanTransmigrasi_3 = function(feature, resolution){
     var context = {
@@ -27,7 +7,7 @@ var style_KawasanTransmigrasi_3 = function(feature, resolution){
         variables: {}
     };
     
-    var labelText = ""; var value = feature.get("PRIORITAS");
+    var labelText = ""; var value = feature.get("");
     var labelFont = "10px, sans-serif";
     var labelFill = "#000000";
     var bufferColor = "";
@@ -39,10 +19,12 @@ var style_KawasanTransmigrasi_3 = function(feature, resolution){
     if ("" !== null) {
         labelText = String("");
     }
-    
-    var style = categories_KawasanTransmigrasi_3(feature, value, size, resolution, labelText,
-                            labelFont, labelFill, bufferColor,
-                            bufferWidth, placement);
+    var style = [ new ol.style.Style({
+        stroke: new ol.style.Stroke({color: 'rgba(53,121,177,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.9}),
+        text: createTextStyle(feature, resolution, labelText, labelFont,
+                              labelFill, placement, bufferColor,
+                              bufferWidth)
+    })];
 
     return style;
 };

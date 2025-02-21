@@ -1,2 +1,0 @@
-# Lembaga Ekonomi Kawasan Transigrasi
- 
